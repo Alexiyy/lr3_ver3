@@ -1,4 +1,4 @@
-def input_valid():
+def input_valid(sp):
     while True:
         x = int(input("Введите переменную x = "))
         if x > 0:
@@ -21,4 +21,14 @@ def x3_1(x):
     return collatz(x)
 
 def collatz(x):
-    pass
+    while x != 1:
+        if x % 2 == 0:
+            return x2(x)
+        else:
+            return x3_1(x)
+    print('Список имеет вид: ', sp)
+
+
+if __name__=='__main__':
+    sp = []
+    input_valid(sp)
